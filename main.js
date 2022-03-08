@@ -454,11 +454,13 @@ function gameEngine() {
         window.cancelAnimationFrame(animation);
         gameOverPage.style.visibility = "visible";
         instruction.innerHTML = "GAME OVER";
+        music.pause();
     }
     else if(pacdotArray.length === 0 && powerDotArray.length === 0){
         window.cancelAnimationFrame(animation);
         gameOverPage.style.visibility = "visible";
         instruction.innerHTML = "YOU WIN";
+        music.pause();
     }
 
     switch (keyPressed) {
