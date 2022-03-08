@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --text: white;
+    --mainColor: rgb(0, 0, 190);
+}
+
+body {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    background: black;
+}
+
+.startPage{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+}
+.start{
+    background: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 0 10px;
+    animation: buttonAni 2s linear infinite;
+    cursor: pointer;
+    color: var(--text);
+}
+.points{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+li{
+    list-style: none;
+}
+ul{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    color: var(--text);
+}
+
+@keyframes buttonAni {
+    0%{
+        border: 3px solid var(--mainColor);
+    }
+    25%{
+        border: 3px solid aliceblue;
+    }
+    100%{
+        border: 3px solid aliceblue;
+    }
+}
+
+.gameOver{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.gameOver>div{
+    color: aliceblue;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+#gameLogo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.buttons {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+    visibility: hidden;
+}
+
+.btn {
+    position: absolute;
+    background: none;
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: inset 0 0 0.15em 0 var(--mainColor), 0 0 0.1em 0 var(--mainColor);
+    text-shadow: 0 0 0.1em hsl(0 0% 100% / 0.3), 0 0 0.1em var(--mainColor);
+}
+
+.btn:hover {
+    background-color: var(--mainColor);
+    border: 2px solid white;
+    color: aliceblue;
+}
+
+#left,
+#right {
+    height: 90px;
+    width: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#right {
+    right: 0;
+}
+
+#up,
+#down {
+    height: 30px;
+    width: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#down {
+    bottom: 0;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.livesCounter,
+.scoreBoard {
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+    font-size: 1.2em;
+    color: var(--text);
+}
+
+.livesCounter {
+    left: 0;
+    margin-left: 10%;
+}
+
+.scoreBoard {
+    right: 0;
+    margin-right: 10%;
+}
+#lives{
+    color: black;
+}
+
+canvas {
+    margin-top: 12vh;
+}
+
+@media screen and (max-width:1000px) {
+    #gameLogo {
+        top: 7vh;
+    }
+    canvas {
+        margin-top: 20vh;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .buttons {
+        visibility: visible;
+    }
+}

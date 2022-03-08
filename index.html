@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>PACMAN</title>
+</head>
+<body>
+    <div class="startPage">
+        <button class="start" id="startGame">PLAY</button>
+        <li>
+            <ul><img class="points" src="images/pac-dot.png" alt="">&nbsp&nbsp&nbsp&nbsp&nbsp<span>5 points</span></ul>
+            <ul><img class="points" src="images/pink-dot.png" alt="">&nbsp&nbsp&nbsp&nbsp&nbsp<span>50 points</span></ul>
+            <ul><img class="points" src="images/ghost.png" alt="">&nbsp&nbsp&nbsp&nbsp&nbsp<span>200 points</span></ul>
+        </li>
+    </div>
+    <img id="gameLogo" src="images/logo.png" alt="">
+    <div class="container">
+        <div class="livesCounter">Lives: <span id="lives">❤️❤️❤️</span></div>
+        <div class="scoreBoard">Score: <span id="score">0</span></div>
+        <canvas id="gameArea"></canvas>
+        <div class="buttons">
+            <button class="btn" id="left">
+                <i class="fa-solid fa-caret-left"></i>
+            </button>
+            <button class="btn" id="up">
+                <i class="fa-solid fa-caret-up"></i>
+            </button>
+            <button class="btn" id="right">
+                <i class="fa-solid fa-caret-right"></i>
+            </button>
+            <button class="btn" id="down">
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+        </div>
+    </div>
+    <div class="gameOver">
+        <div id="text"></div>
+        <button class="start" id="restart">RESTART</button>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
