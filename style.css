@@ -105,8 +105,8 @@ ul{
 
 .buttons {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-top: 40px;
     visibility: hidden;
 }
@@ -131,8 +131,8 @@ ul{
 
 #left,
 #right {
-    height: 100px;
-    width: 50px;
+    height: 150px;
+    width: 75px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -143,8 +143,8 @@ ul{
 
 #up,
 #down {
-    height: 50px;
-    width: 100px;
+    height: 75px;
+    width: 150px;
     left: 50%;
     transform: translateX(-50%);
 }
